@@ -1,0 +1,15 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+
+# Output folder (don"t commit large audio/generated reports)
+output/
+*_results/
+
+# Environmental variables (safety)
+.env
+.api_key
+
+# IDEs
+.vscode/
+.idea/
