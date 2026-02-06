@@ -10,6 +10,13 @@ output/
 .env
 .api_key
 
+# Media files (avoid large binaries in repo root)
+*.mp3
+*.webm
+
+# Local feed configs (may contain private URLs)
+feeds.yaml
+
 # IDEs
 .vscode/
 .idea/

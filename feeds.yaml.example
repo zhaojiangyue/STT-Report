@@ -1,0 +1,5 @@
+feeds:
+  - name: "Example Podcast"
+    url: "https://feeds.simplecast.com/yourfeed"
+    reports: [professional, children]
+    auto_process: true

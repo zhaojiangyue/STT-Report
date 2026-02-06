@@ -1,0 +1,70 @@
+defaults:
+  language: zh
+  reports: [professional, children]
+  tts: true
+  timestamps: false
+  export_formats: [md]
+
+models:
+  text: gemini-3-pro-preview
+  audio: gemini-2.5-flash-preview-tts
+
+cost:
+  tokens_per_minute: 1500
+  usd_per_1k_tokens: 0.01
+
+reports:
+  professional:
+    temperature: 0.3
+    prompt:
+      file: professional.md
+  children:
+    temperature: 0.5
+    prompt:
+      file: children.md
+
+paths:
+  output_dir: output
+  prompts_dir: prompts
+
+plugins:
+  enabled: []
+  config:
+    email:
+      smtp_host: smtp.example.com
+      smtp_port: 587
+      username: user@example.com
+      password: your_password
+      to: you@example.com
+      from: user@example.com
+      subject: STT Report Ready
+    notion:
+      token: your_notion_token
+      database_id: your_database_id
+    obsidian:
+      vault_path: C:/path/to/obsidian/vault
+    telegram:
+      bot_token: your_bot_token
+      chat_id: your_chat_id
+
+intelligence:
+  enabled: true
+  auto_select_reports: true
+  content_type_map:
+    lecture: [professional, children]
+    interview: [professional]
+    news: [professional]
+    tutorial: [professional, children]
+    podcast: [professional]
+    meeting: [professional]
+    other: [professional]
+  content_type_detection: true
+  key_quotes: true
+  fact_check: true
+  follow_up_questions: true
+  related_content: true
+  knowledge_graph: true
+
+timeouts:
+  processing_seconds: 1200
+  reupload_on_fail: true

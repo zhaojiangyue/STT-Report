@@ -1,0 +1,11 @@
+google-genai
+yt-dlp
+tqdm
+python-dotenv
+pyyaml
+flask
+feedparser
+requests
+reportlab
+python-docx
+notion-client
